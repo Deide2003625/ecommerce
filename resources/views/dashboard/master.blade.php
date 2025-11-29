@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" >
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <base href="{{ asset('assets') . '/' }}">
@@ -38,8 +38,9 @@
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
     @notifyCss
@@ -47,6 +48,10 @@
     <style type="text/css">
         .notify {
             z-index: 1001 !important;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
         }
     </style>
 </head>
@@ -59,7 +64,7 @@
         @include('dashboard.partials.header')
 
         <div class="dashboard-main-body">
-@include('message')
+
             @yield('content')
 
         </div>
@@ -67,6 +72,7 @@
         @include('dashboard.partials.footer')
 
     </main>
+
 
     @include('notify::components.notify')
 
@@ -101,6 +107,9 @@
 
     <script src="js/homeThreeChart.js"></script>
 
+    <!-- notify perso js -->
+    <script src="js/notify-perso.js"></script>
+
     <script>
         function logout() {
             $.ajax({
@@ -109,12 +118,12 @@
                 data: {
                     _token: "{{ csrf_token() }}"
                 },
-                success: function(response) {
+                success: function (response) {
                     if (response.success) {
-                        window.location.href = response.redirect ;
+                        window.location.href = response.redirect;
                     }
                 },
-                error: function(xhr) {
+                error: function (xhr) {
                     console.log(xhr);
                 }
             });
@@ -122,6 +131,8 @@
     </script>
 
     @notifyJs
+
+    @stack('js')
 
 </body>
 

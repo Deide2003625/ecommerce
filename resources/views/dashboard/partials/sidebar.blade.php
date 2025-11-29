@@ -225,24 +225,17 @@
       <!-- Administration -->
       <li class="sidebar-menu-group-title">Administration</li>
       <li>
-        <a href="{{ route('register') }}">
+        <a href="{{ route('users.index') }}">
           <iconify-icon icon="mdi:account-multiple-outline" class="menu-icon"></iconify-icon>
           <span>Utilisateurs</span>
         </a>
       </li>
       <li>
-        <a href="javascript:void(0)">
+        <a href="{{ route('roles.index') }}">
           <iconify-icon icon="mdi:shield-account-outline" class="menu-icon"></iconify-icon>
           <span>Rôles</span>
         </a>
       </li>
-      <li>
-        <a href="javascript:void(0)">
-          <iconify-icon icon="mdi:account-key-outline" class="menu-icon"></iconify-icon>
-          <span>Permissions</span>
-        </a>
-      </li>
-
     </ul>
   </div>
 </aside>

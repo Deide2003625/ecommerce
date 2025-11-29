@@ -19,7 +19,7 @@ class CommandeController extends Controller
             ->orderBy('created_at', 'desc')
             ->paginate(10);
 
-        return view('commande.table', compact('commandes'));
+        return view('dashboard.commande.index', compact('commandes'));
     }
 
     /**
@@ -38,7 +38,7 @@ class CommandeController extends Controller
     {
         $clients = User::role('client')->get();
         $livreurs = User::role('livreur')->get();
-        
+
         return view('commande.create', compact('clients', 'livreurs'));
     }
 
@@ -94,7 +94,7 @@ class CommandeController extends Controller
         $commande->load('items.produit');
         $clients = User::role('client')->get();
         $livreurs = User::role('livreur')->get();
-        
+
         return view('commande.edit', compact('commande', 'clients', 'livreurs'));
     }
 

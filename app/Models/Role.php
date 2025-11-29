@@ -10,6 +10,11 @@ class Role extends SpatieRole implements Auditable
 {
     use \OwenIt\Auditing\Auditable;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'name',
+        'guard_name',
+        'is_deleted',
+        'description',
+    ];
 
 }

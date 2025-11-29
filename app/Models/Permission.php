@@ -10,6 +10,10 @@ class Permission extends SpatiePermission implements Auditable
 {
     use \OwenIt\Auditing\Auditable;
 
-    protected $guarded = [];
+    protected $fillable = [
+        'name',
+        'guard_name',
+        'description',
+    ];
 
 }

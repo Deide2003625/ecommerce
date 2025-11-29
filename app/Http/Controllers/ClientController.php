@@ -22,10 +22,10 @@ class ClientController extends Controller
         ->with('roles')
         ->orderBy('created_at', 'desc')
         ->paginate(10);
-        
+
         // Pour le débogage - à supprimer en production
         \Log::info('Clients trouvés : ' . $clients->count());
-        
-        return view('client.client', compact('clients'));
+
+        return view('dashboard.client.index', compact('clients'));
     }
 }

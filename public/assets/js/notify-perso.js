@@ -1,6 +1,6 @@
 const { Warning } = require("postcss");
 
-function notifyJs(type, mainMessage, secondaryMessage) {
+function JsNotify(type, mainMessage, secondaryMessage) {
     // Define classes based on type
     const typeClasses = {
         error: {

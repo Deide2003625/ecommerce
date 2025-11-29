@@ -19,6 +19,7 @@ class UsersSeeder extends Seeder
                 'name' => 'Super Admin',
                 'email' => 'superadmin@gmail.com',
                 'phone' => '1234567890',
+                'do_an_action'=> 'true',
                 'is_active' => true,
                 'password' => Hash::make('password'), // password
             ],
@@ -26,6 +27,7 @@ class UsersSeeder extends Seeder
                 'name' => 'Admin',
                 'email' => 'admin@gmail.com',
                 'phone'=> '0987654321',
+                'do_an_action'=> 'true',
                 'is_active' => true,
                 'password' => Hash::make('password'), // password
             ],
@@ -33,6 +35,7 @@ class UsersSeeder extends Seeder
                 'name' => 'Gestionnaire',
                 'email' => 'gestionnaire@gmail.com',
                 'phone'=> '1234567890',
+                'do_an_action'=> 'true',
                 'is_active'=> true,
                 'password' => Hash::make('password'), // password
             ],
@@ -40,6 +43,7 @@ class UsersSeeder extends Seeder
                 'name' => 'Livreur',
                 'email' => 'livreur@gmail.com',
                 'phone'=> '0987654321',
+                'do_an_action'=> 'true',
                 'is_active' => true,
                 'password' => Hash::make('password'), // password
             ],
@@ -47,6 +51,7 @@ class UsersSeeder extends Seeder
                 'name' => 'Client',
                 'email' => 'client@gmail.com',
                 'phone'=> '1234567890',
+                'do_an_action'=> 'true',
                 'is_active' => true,
                 'password' => Hash::make('password'), // password
             ],

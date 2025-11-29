@@ -33,9 +33,6 @@ class PermissionSeeder extends Seeder
         // 3. Permissions Permissions (CRUD séparé)
         $permissionPermissions = [
             'permissions.voir',
-            'permissions.creer',
-            'permissions.modifier',
-            'permissions.supprimer',
             'permissions.assigner'
         ];
 
@@ -185,7 +182,157 @@ class PermissionSeeder extends Seeder
             'avis.voir',
             'avis.approuver',
             'avis.rejeter',
-            'avis.supprimer'
+            'avis.supprimer',
+            'avis.creer'
+        ];
+
+        $descriptions = [
+            // Utilisateurs
+            'utilisateurs.voir' => 'Voir la liste des utilisateurs',
+            'utilisateurs.creer' => 'Créer un nouvel utilisateur',
+            'utilisateurs.modifier' => 'Modifier un utilisateur',
+            'utilisateurs.supprimer' => 'Supprimer un utilisateur',
+            'utilisateurs.impersonifier' => 'Se connecter en tant qu’un autre utilisateur',
+
+            // Rôles
+            'roles.voir' => 'Voir la liste des rôles',
+            'roles.creer' => 'Créer un nouveau rôle',
+            'roles.modifier' => 'Modifier un rôle',
+            'roles.supprimer' => 'Supprimer un rôle',
+            'roles.assigner' => 'Assigner un rôle à un utilisateur',
+
+            // Permissions
+            'permissions.voir' => 'Voir la liste des permissions',
+            'permissions.assigner' => 'Assigner une permission à un rôle',
+
+            // Produits
+            'produits.voir' => 'Voir la liste des produits',
+            'produits.creer' => 'Créer un nouveau produit',
+            'produits.modifier' => 'Modifier un produit',
+            'produits.supprimer' => 'Supprimer un produit',
+            'produits.activer_desactiver' => 'Activer ou désactiver un produit',
+
+            // Catégories
+            'categories.voir' => 'Voir la liste des catégories',
+            'categories.creer' => 'Créer une nouvelle catégorie',
+            'categories.modifier' => 'Modifier une catégorie',
+            'categories.supprimer' => 'Supprimer une catégorie',
+
+            // Sous-catégories
+            'sous_categories.voir' => 'Voir la liste des sous-catégories',
+            'sous_categories.creer' => 'Créer une nouvelle sous-catégorie',
+            'sous_categories.modifier' => 'Modifier une sous-catégorie',
+            'sous_categories.supprimer' => 'Supprimer une sous-catégorie',
+
+            // Stock
+            'stock.voir' => 'Voir le stock',
+            'stock.modifier' => 'Modifier le stock',
+            'stock.gerer' => 'Gérer le stock',
+
+            // Commandes
+            'commandes.voir' => 'Voir la liste des commandes',
+            'commandes.creer' => 'Créer une nouvelle commande',
+            'commandes.modifier' => 'Modifier une commande',
+            'commandes.supprimer' => 'Supprimer une commande',
+            'commandes.traiter' => 'Traiter une commande',
+            'commandes.rembourser' => 'Rembourser une commande',
+            'commandes.exporter' => 'Exporter les commandes',
+            'commandes.annuler' => 'Annuler une commande',
+            'commandes.payer' => 'Payer une commande',
+
+            // Coupons
+            'coupons.voir' => 'Voir la liste des coupons',
+            'coupons.creer' => 'Créer un nouveau coupon',
+            'coupons.modifier' => 'Modifier un coupon',
+            'coupons.supprimer' => 'Supprimer un coupon',
+
+            // Livraison
+            'livraisons.voir' => 'Voir la liste des livraisons',
+            'livraisons.assigner' => 'Assigner une livraison',
+            'livraisons.suivre' => 'Suivre une livraison',
+            'livraisons.modifier' => 'Modifier une livraison',
+
+            // Livreurs
+            'livreurs.voir' => 'Voir la liste des livreurs',
+            'livreurs.creer' => 'Créer un livreur',
+            'livreurs.modifier' => 'Modifier un livreur',
+            'livreurs.supprimer' => 'Supprimer un livreur',
+
+            // Transactions
+            'transactions.voir' => 'Voir la liste des transactions',
+            'transactions.traiter' => 'Traiter une transaction',
+            'transactions.rembourser' => 'Rembourser une transaction',
+
+            // Méthodes de paiement
+            'methodes_paiement.voir' => 'Voir les méthodes de paiement',
+            'methodes_paiement.creer' => 'Créer une méthode de paiement',
+            'methodes_paiement.modifier' => 'Modifier une méthode de paiement',
+            'methodes_paiement.supprimer' => 'Supprimer une méthode de paiement',
+            'methodes_paiement.activer_desactiver' => 'Activer ou désactiver une méthode de paiement',
+
+            // Factures
+            'factures.voir' => 'Voir la liste des factures',
+            'factures.generer' => 'Générer une facture',
+            'factures.telecharger' => 'Télécharger une facture',
+
+            // Articles de blog
+            'articles_blog.voir' => 'Voir la liste des articles de blog',
+            'articles_blog.creer' => 'Créer un article de blog',
+            'articles_blog.modifier' => 'Modifier un article de blog',
+            'articles_blog.supprimer' => 'Supprimer un article de blog',
+            'articles_blog.publier' => 'Publier un article de blog',
+            'articles_blog.moderer' => 'Modérer un article de blog',
+
+            // Commentaires
+            'commentaires.voir' => 'Voir la liste des commentaires',
+            'commentaires.approuver' => 'Approuver un commentaire',
+            'commentaires.rejeter' => 'Rejeter un commentaire',
+            'commentaires.supprimer' => 'Supprimer un commentaire',
+
+            // Newsletters
+            'newsletters.voir' => 'Voir la liste des newsletters',
+            'newsletters.creer' => 'Créer une newsletter',
+            'newsletters.envoyer' => 'Envoyer une newsletter',
+            'newsletters.supprimer' => 'Supprimer une newsletter',
+
+            // Bannières
+            'bannieres.voir' => 'Voir la liste des bannières',
+            'bannieres.creer' => 'Créer une bannière',
+            'bannieres.modifier' => 'Modifier une bannière',
+            'bannieres.supprimer' => 'Supprimer une bannière',
+
+            // Clients
+            'clients.voir' => 'Voir la liste des clients',
+            'clients.creer' => 'Créer un client',
+            'clients.modifier' => 'Modifier un client',
+            'clients.supprimer' => 'Supprimer un client',
+            'clients.bloquer' => 'Bloquer un client',
+
+            // Adresses
+            'adresses.voir' => 'Voir la liste des adresses',
+            'adresses.creer' => 'Créer une adresse',
+            'adresses.modifier' => 'Modifier une adresse',
+            'adresses.supprimer' => 'Supprimer une adresse',
+
+            // Avis
+            'avis.voir' => 'Voir la liste des avis',
+            'avis.approuver' => 'Approuver un avis',
+            'avis.rejeter' => 'Rejeter un avis',
+            'avis.supprimer' => 'Supprimer un avis',
+            'avis.creer' => 'Créer un avis',
+
+            // Statistiques
+            'statistiques.voir' => 'Voir les statistiques',
+            'rapports.generer' => 'Générer un rapport',
+            'visiteurs.suivre' => 'Suivre les visiteurs',
+
+            // Paramètres
+            'parametres.voir' => 'Voir les paramètres',
+            'parametres.modifier' => 'Modifier les paramètres',
+
+            // Permissions spéciales
+            'audit.voir' => 'Voir les audits',
+            'base_donnees.exporter' => 'Exporter la base de données',
         ];
 
         // 22. Permissions Statistiques (CRUD séparé)
@@ -237,13 +384,14 @@ class PermissionSeeder extends Seeder
 
         // Create permissions using loop with descriptions
         foreach ($allPermissions as $permission) {
+            $desc = $this->getPermissionDescription($permission);
             Permission::firstOrCreate([
                 'name' => $permission,
                 'guard_name' => 'web',
                 'created_at' => now(),
                 'updated_at' => now()
             ], [
-                'description' => $this->getPermissionDescription($permission)
+                'description' => $desc ?: ucfirst(str_replace('.', ' ', $permission))
             ]);
         }
     }
@@ -255,151 +403,147 @@ class PermissionSeeder extends Seeder
     {
         $descriptions = [
             // Utilisateurs
-            'utilisateurs.voir' => 'Permet de voir la liste des utilisateurs du système',
-            'utilisateurs.creer' => 'Permet de créer de nouveaux utilisateurs',
-            'utilisateurs.modifier' => 'Permet de modifier les informations des utilisateurs',
-            'utilisateurs.supprimer' => 'Permet de supprimer des utilisateurs du système',
-            'utilisateurs.impersonifier' => 'Permet de se connecter en tant qu\'un autre utilisateur',
+            'utilisateurs.voir' => 'voir la liste des utilisateurs du système',
+            'utilisateurs.creer' => 'créer de nouveaux utilisateurs',
+            'utilisateurs.modifier' => 'modifier les informations des utilisateurs',
+            'utilisateurs.supprimer' => 'supprimer des utilisateurs du système',
+            'utilisateurs.impersonifier' => 'se connecter en tant qu\'un autre utilisateur',
 
             // Rôles
-            'roles.voir' => 'Permet de voir la liste des rôles disponibles',
-            'roles.creer' => 'Permet de créer de nouveaux rôles',
-            'roles.modifier' => 'Permet de modifier les rôles existants',
-            'roles.supprimer' => 'Permet de supprimer des rôles',
-            'roles.assigner' => 'Permet d\'assigner des rôles aux utilisateurs',
+            'roles.voir' => 'voir la liste des rôles disponibles',
+            'roles.creer' => 'créer de nouveaux rôles',
+            'roles.modifier' => 'modifier les rôles existants',
+            'roles.supprimer' => 'supprimer des rôles',
+            'roles.assigner' => 'd\'assigner des rôles aux utilisateurs',
 
             // Permissions
-            'permissions.voir' => 'Permet de voir la liste des permissions disponibles',
-            'permissions.creer' => 'Permet de créer de nouvelles permissions',
-            'permissions.modifier' => 'Permet de modifier les permissions existantes',
-            'permissions.supprimer' => 'Permet de supprimer des permissions',
-            'permissions.assigner' => 'Permet d\'assigner des permissions aux rôles',
+            'permissions.voir' => 'voir la liste des permissions disponibles',
 
             // Produits
-            'produits.voir' => 'Permet de voir la liste des produits du catalogue',
-            'produits.creer' => 'Permet d\'ajouter de nouveaux produits au catalogue',
-            'produits.modifier' => 'Permet de modifier les informations des produits',
-            'produits.supprimer' => 'Permet de supprimer des produits du catalogue',
-            'produits.activer_desactiver' => 'Permet d\'activer ou désactiver des produits',
+            'produits.voir' => 'voir la liste des produits du catalogue',
+            'produits.creer' => 'd\'ajouter de nouveaux produits au catalogue',
+            'produits.modifier' => 'modifier les informations des produits',
+            'produits.supprimer' => 'supprimer des produits du catalogue',
+            'produits.activer_desactiver' => 'd\'activer ou désactiver des produits',
 
             // Catégories
-            'categories.voir' => 'Permet de voir la liste des catégories de produits',
-            'categories.creer' => 'Permet de créer de nouvelles catégories',
-            'categories.modifier' => 'Permet de modifier les catégories existantes',
-            'categories.supprimer' => 'Permet de supprimer des catégories',
+            'categories.voir' => 'voir la liste des catégories de produits',
+            'categories.creer' => 'créer de nouvelles catégories',
+            'categories.modifier' => 'modifier les catégories existantes',
+            'categories.supprimer' => 'supprimer des catégories',
 
             // Sous-catégories
-            'sous_categories.voir' => 'Permet de voir la liste des sous-catégories',
-            'sous_categories.creer' => 'Permet de créer de nouvelles sous-catégories',
-            'sous_categories.modifier' => 'Permet de modifier les sous-catégories existantes',
-            'sous_categories.supprimer' => 'Permet de supprimer des sous-catégories',
+            'sous_categories.voir' => 'voir la liste des sous-catégories',
+            'sous_categories.creer' => 'créer de nouvelles sous-catégories',
+            'sous_categories.modifier' => 'modifier les sous-catégories existantes',
+            'sous_categories.supprimer' => 'supprimer des sous-catégories',
 
             // Stock
-            'stock.voir' => 'Permet de voir les niveaux de stock des produits',
-            'stock.modifier' => 'Permet de modifier les quantités en stock',
-            'stock.gerer' => 'Permet de gérer complètement le stock (alertes, transferts, etc.)',
+            'stock.voir' => 'voir les niveaux de stock des produits',
+            'stock.modifier' => 'modifier les quantités en stock',
+            'stock.gerer' => 'gérer complètement le stock (alertes, transferts, etc.)',
 
             // Commandes
-            'commandes.voir' => 'Permet de voir la liste des commandes',
-            'commandes.creer' => 'Permet de créer de nouvelles commandes manuellement',
-            'commandes.modifier' => 'Permet de modifier les détails des commandes',
-            'commandes.supprimer' => 'Permet de supprimer des commandes',
-            'commandes.traiter' => 'Permet de traiter et valider les commandes',
-            'commandes.rembourser' => 'Permet d\'effectuer des remboursements',
-            'commandes.exporter' => 'Permet d\'exporter les données des commandes',
+            'commandes.voir' => 'voir la liste des commandes',
+            'commandes.creer' => 'créer de nouvelles commandes manuellement',
+            'commandes.modifier' => 'modifier les détails des commandes',
+            'commandes.supprimer' => 'supprimer des commandes',
+            'commandes.traiter' => 'traiter et valider les commandes',
+            'commandes.rembourser' => 'd\'effectuer des remboursements',
+            'commandes.exporter' => 'd\'exporter les données des commandes',
 
             // Coupons
-            'coupons.voir' => 'Permet de voir la liste des coupons disponibles',
-            'coupons.creer' => 'Permet de créer de nouveaux coupons de réduction',
-            'coupons.modifier' => 'Permet de modifier les coupons existants',
-            'coupons.supprimer' => 'Permet de supprimer des coupons',
+            'coupons.voir' => 'voir la liste des coupons disponibles',
+            'coupons.creer' => 'créer de nouveaux coupons de réduction',
+            'coupons.modifier' => 'modifier les coupons existants',
+            'coupons.supprimer' => 'supprimer des coupons',
 
             // Livraisons
-            'livraisons.voir' => 'Permet de voir la liste des livraisons',
-            'livraisons.assigner' => 'Permet d\'assigner des livreurs aux livraisons',
-            'livraisons.suivre' => 'Permet de suivre l\'état des livraisons',
-            'livraisons.modifier' => 'Permet de modifier les informations de livraison',
+            'livraisons.voir' => 'voir la liste des livraisons',
+            'livraisons.assigner' => 'd\'assigner des livreurs aux livraisons',
+            'livraisons.suivre' => 'suivre l\'état des livraisons',
+            'livraisons.modifier' => 'modifier les informations de livraison',
 
             // Livreurs
-            'livreurs.voir' => 'Permet de voir la liste des livreurs',
-            'livreurs.creer' => 'Permet d\'ajouter de nouveaux livreurs',
-            'livreurs.modifier' => 'Permet de modifier les informations des livreurs',
-            'livreurs.supprimer' => 'Permet de supprimer des livreurs',
+            'livreurs.voir' => 'voir la liste des livreurs',
+            'livreurs.creer' => 'd\'ajouter de nouveaux livreurs',
+            'livreurs.modifier' => 'modifier les informations des livreurs',
+            'livreurs.supprimer' => 'supprimer des livreurs',
 
             // Transactions
-            'transactions.voir' => 'Permet de voir l\'historique des transactions',
-            'transactions.traiter' => 'Permet de traiter les paiements',
-            'transactions.rembourser' => 'Permet d\'effectuer des remboursements',
+            'transactions.voir' => 'voir l\'historique des transactions',
+            'transactions.traiter' => 'traiter les paiements',
+            'transactions.rembourser' => 'd\'effectuer des remboursements',
 
             // Méthodes de Paiement
-            'methodes_paiement.voir' => 'Permet de voir les méthodes de paiement configurées',
-            'methodes_paiement.creer' => 'Permet d\'ajouter de nouvelles méthodes de paiement',
-            'methodes_paiement.modifier' => 'Permet de modifier les méthodes de paiement',
-            'methodes_paiement.supprimer' => 'Permet de supprimer des méthodes de paiement',
-            'methodes_paiement.activer_desactiver' => 'Permet d\'activer ou désactiver des méthodes de paiement',
+            'methodes_paiement.voir' => 'voir les méthodes de paiement configurées',
+            'methodes_paiement.creer' => 'd\'ajouter de nouvelles méthodes de paiement',
+            'methodes_paiement.modifier' => 'modifier les méthodes de paiement',
+            'methodes_paiement.supprimer' => 'supprimer des méthodes de paiement',
+            'methodes_paiement.activer_desactiver' => 'd\'activer ou désactiver des méthodes de paiement',
 
             // Factures
-            'factures.voir' => 'Permet de voir la liste des factures',
-            'factures.generer' => 'Permet de générer de nouvelles factures',
-            'factures.telecharger' => 'Permet de télécharger les factures',
+            'factures.voir' => 'voir la liste des factures',
+            'factures.generer' => 'générer de nouvelles factures',
+            'factures.telecharger' => 'télécharger les factures',
 
             // Articles de Blog
-            'articles_blog.voir' => 'Permet de voir la liste des articles de blog',
-            'articles_blog.creer' => 'Permet de créer de nouveaux articles',
-            'articles_blog.modifier' => 'Permet de modifier les articles existants',
-            'articles_blog.supprimer' => 'Permet de supprimer des articles',
-            'articles_blog.publier' => 'Permet de publier des articles',
-            'articles_blog.moderer' => 'Permet de modérer le contenu des articles',
+            'articles_blog.voir' => 'voir la liste des articles de blog',
+            'articles_blog.creer' => 'créer de nouveaux articles',
+            'articles_blog.modifier' => 'modifier les articles existants',
+            'articles_blog.supprimer' => 'supprimer des articles',
+            'articles_blog.publier' => 'publier des articles',
+            'articles_blog.moderer' => 'modérer le contenu des articles',
 
             // Commentaires
-            'commentaires.voir' => 'Permet de voir la liste des commentaires',
-            'commentaires.approuver' => 'Permet d\'approuver des commentaires',
-            'commentaires.rejeter' => 'Permet de rejeter des commentaires',
-            'commentaires.supprimer' => 'Permet de supprimer des commentaires',
+            'commentaires.voir' => 'voir la liste des commentaires',
+            'commentaires.approuver' => 'd\'approuver des commentaires',
+            'commentaires.rejeter' => 'rejeter des commentaires',
+            'commentaires.supprimer' => 'supprimer des commentaires',
 
             // Newsletters
-            'newsletters.voir' => 'Permet de voir la liste des newsletters',
-            'newsletters.creer' => 'Permet de créer de nouvelles newsletters',
-            'newsletters.envoyer' => 'Permet d\'envoyer des newsletters',
-            'newsletters.supprimer' => 'Permet de supprimer des newsletters',
+            'newsletters.voir' => 'voir la liste des newsletters',
+            'newsletters.creer' => 'créer de nouvelles newsletters',
+            'newsletters.envoyer' => 'd\'envoyer des newsletters',
+            'newsletters.supprimer' => 'supprimer des newsletters',
 
             // Bannières
-            'bannieres.voir' => 'Permet de voir la liste des bannières',
-            'bannieres.creer' => 'Permet de créer de nouvelles bannières',
-            'bannieres.modifier' => 'Permet de modifier les bannières existantes',
-            'bannieres.supprimer' => 'Permet de supprimer des bannières',
+            'bannieres.voir' => 'voir la liste des bannières',
+            'bannieres.creer' => 'créer de nouvelles bannières',
+            'bannieres.modifier' => 'modifier les bannières existantes',
+            'bannieres.supprimer' => 'supprimer des bannières',
 
             // Clients
-            'clients.voir' => 'Permet de voir la liste des clients',
-            'clients.creer' => 'Permet de créer de nouveaux comptes clients',
-            'clients.modifier' => 'Permet de modifier les informations des clients',
-            'clients.supprimer' => 'Permet de supprimer des comptes clients',
-            'clients.bloquer' => 'Permet de bloquer des comptes clients',
+            'clients.voir' => 'voir la liste des clients',
+            'clients.creer' => 'créer de nouveaux comptes clients',
+            'clients.modifier' => 'modifier les informations des clients',
+            'clients.supprimer' => 'supprimer des comptes clients',
+            'clients.bloquer' => 'bloquer des comptes clients',
 
             // Adresses
-            'adresses.voir' => 'Permet de voir les adresses des clients',
-            'adresses.creer' => 'Permet d\'ajouter de nouvelles adresses',
-            'adresses.modifier' => 'Permet de modifier les adresses existantes',
-            'adresses.supprimer' => 'Permet de supprimer des adresses',
+            'adresses.voir' => 'voir les adresses des clients',
+            'adresses.creer' => 'd\'ajouter de nouvelles adresses',
+            'adresses.modifier' => 'modifier les adresses existantes',
+            'adresses.supprimer' => 'supprimer des adresses',
 
             // Avis
-            'avis.voir' => 'Permet de voir la liste des avis clients',
-            'avis.approuver' => 'Permet d\'approuver des avis clients',
-            'avis.rejeter' => 'Permet de rejeter des avis clients',
-            'avis.supprimer' => 'Permet de supprimer des avis clients',
+            'avis.voir' => 'voir la liste des avis clients',
+            'avis.approuver' => 'd\'approuver des avis clients',
+            'avis.rejeter' => 'rejeter des avis clients',
+            'avis.supprimer' => 'supprimer des avis clients',
 
             // Statistiques
-            'statistiques.voir' => 'Permet d\'accéder aux statistiques du site',
-            'rapports.generer' => 'Permet de générer des rapports',
-            'visiteurs.suivre' => 'Permet de suivre les visiteurs du site',
+            'statistiques.voir' => 'd\'accéder aux statistiques du site',
+            'rapports.generer' => 'générer des rapports',
+            'visiteurs.suivre' => 'suivre les visiteurs du site',
 
             // Paramètres
-            'parametres.voir' => 'Permet de voir les paramètres du système',
-            'parametres.modifier' => 'Permet de modifier les paramètres du système',
+            'parametres.voir' => 'voir les paramètres du système',
+            'parametres.modifier' => 'modifier les paramètres du système',
 
             // Permissions Spéciales
-            'audit.voir' => 'Permet de voir les logs d\'audit du système',
-            'base_donnees.exporter' => 'Permet d\'exporter la base de données complète',
+            'audit.voir' => 'voir les logs d\'audit du système',
+            'base_donnees.exporter' => 'd\'exporter la base de données complète',
         ];
 
         return $descriptions[$permission] ?? 'Permission pour ' . str_replace('_', ' ', $permission);
