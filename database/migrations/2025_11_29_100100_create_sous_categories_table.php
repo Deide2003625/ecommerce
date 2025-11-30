@@ -8,7 +8,6 @@ return new class extends Migration {
         Schema::create('sous_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nom');
-            $table->text('description')->nullable();
             $table->unsignedBigInteger('categorie_id');
             $table->timestamps();
             $table->foreign('categorie_id')->references('id')->on('categories')->onDelete('cascade');

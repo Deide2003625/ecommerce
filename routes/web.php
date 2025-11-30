@@ -1,10 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ProduitController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CommandeController;
+use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\ValeurOptionController;
+use App\Http\Controllers\OptionProduitController;
+use App\Http\Controllers\VarianteProduitController;
+use App\Http\Controllers\Dashboard\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +54,25 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::prefix('clients')->name('clients.')->group(function () {
         Route::get('/', [ClientController::class, 'index'])->name('index');
     });
+
+    // Gestion des catégories
+    Route::resource('categories', CategorieController::class);
+
+    // Sous-catégorie (ajout/suppression via CategorieController)
+    Route::post('categories/{category}/subcategories', [CategorieController::class, 'addSubcategory'])->name('categories.subcategories.store');
+    Route::delete('categories/{category}/subcategories/{subcategory}', [CategorieController::class, 'deleteSubcategory'])->name('categories.subcategories.destroy');
+
+    // Gestion des produits
+    Route::resource('produits', ProduitController::class);
+
+    // Options de produit (imbriquées)
+    Route::resource('produits.options', OptionProduitController::class)->shallow();
+
+    // Valeurs d'option (imbriquées)
+    Route::resource('options.valeurs', ValeurOptionController::class)->shallow();
+
+    // Variantes de produit (imbriquées)
+    Route::resource('produits.variantes', VarianteProduitController::class)->shallow();
 
     // Gestion des commandes
     Route::prefix('commandes')->name('commandes.')->group(function () {

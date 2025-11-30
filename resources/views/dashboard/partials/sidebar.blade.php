@@ -24,23 +24,11 @@
 
       <!-- Catalogue -->
       <li class="sidebar-menu-group-title">Catalogue</li>
-      <li class="dropdown">
-        <a href="javascript:void(0)">
+      <li>
+        <a href="{{ route('categories.index') }}">
           <iconify-icon icon="carbon:categories" class="menu-icon"></iconify-icon>
-          <span>Catégories</span>
+          <span>Gestion des catégories</span>
         </a>
-        <ul class="sidebar-submenu">
-          <li>
-            <a href="categories-create.html">
-              <i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Ajouter une catégorie
-            </a>
-          </li>
-          <li>
-            <a href="categories-list.html">
-              <i class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Liste des catégories
-            </a>
-          </li>
-        </ul>
       </li>
 
       <li class="dropdown">
@@ -50,12 +38,12 @@
         </a>
         <ul class="sidebar-submenu">
           <li>
-            <a href="products-create.html">
+            <a href="{{ route('produits.create') }}">
               <i class="ri-circle-fill circle-icon text-primary-600 w-auto"></i> Ajouter un produit
             </a>
           </li>
           <li>
-            <a href="products-list.html">
+            <a href="{{ route('produits.index') }}">
               <i class="ri-circle-fill circle-icon text-warning-main w-auto"></i> Liste des produits
             </a>
           </li>
